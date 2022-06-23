@@ -229,7 +229,7 @@ function quitarFav(id) {
 
 function armarFavs() {
     let datas = JSON.parse(localStorage.getItem('favoritos'));
-    if (datas.length == 0) {
+    if (datas == null || datas.length == 0) {
         divFavoritos.innerHTML = '<p class="text-center mt-2 fs-4">No hay personajes en favoritos.</p>'
     }
     for (let data of datas) {
